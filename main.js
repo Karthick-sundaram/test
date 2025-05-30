@@ -87,6 +87,10 @@ cacheBtn.addEventListener('click', async function () {
   const cache = await caches.open('video-cache');
   try {
     const response = await fetch(VIDEO_URL, { mode: 'cors', cache: "reload" });
+    console.log('Response status:', response.status);
+    console.log('Response type:', response.type);
+    console.log('Response url:', response.url);
+    console.log('Response ok:', response.ok);
     if (response.ok) {
       await cache.put('/cached-video', response.clone());
       localStorage.setItem('cachedVideoName', VIDEO_URL);
