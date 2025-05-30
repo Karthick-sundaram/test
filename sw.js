@@ -6,7 +6,7 @@ const STATIC_FILES = [
   "/main.css",
   "/sw.js",
   "/manifest.json",
-  "/single-video.mp4",
+  "/trailer.mp4",
   "/icon-512.png",
 ];
 
